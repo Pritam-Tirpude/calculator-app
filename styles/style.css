@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --main-background: hsl(222, 26%, 31%);
+  --toggle-keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  /* Keys */
+  --key-background: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --key-toggle-background: hsl(6, 63%, 50%);
+  --key-toggle-shadow: hsl(6, 70%, 34%);
+  --key-button-background: hsl(30, 25%, 89%);
+  --key-button-shadow: hsl(28, 16%, 65%);
+
+  /* Text */
+  --text-color: hsl(221, 14%, 31%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="theme-one"] {
+  --main-background: hsl(222, 26%, 31%);
+  --toggle-keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --key-background: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --key-toggle-background: hsl(6, 63%, 50%);
+  --key-toggle-shadow: hsl(6, 70%, 34%);
+  --key-button-background: hsl(30, 25%, 89%);
+  --key-button-shadow: hsl(28, 16%, 65%);
+  --text-color: hsl(221, 14%, 31%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="theme-two"] {
+  --main-background: hsl(0, 0%, 90%);
+  --toggle-keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+  --key-background: hsl(185, 42%, 37%);
+  --key-shadow: hsl(185, 58%, 25%);
+  --key-toggle-background: hsl(25, 98%, 40%);
+  --key-toggle-shadow: hsl(25, 99%, 27%);
+  --key-button-background: hsl(45, 7%, 89%);
+  --key-button-shadow: hsl(35, 11%, 61%);
+  --text-color: hsl(60, 10%, 19%);
+  --white-color: hsl(0, 0, 100%);
+}
+
+[data-theme="theme-three"] {
+  --main-background: hsl(268, 75%, 9%);
+  --toggle-keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+  --key-background: hsl(281, 89%, 26%);
+  --key-shadow: hsl(285, 91%, 52%);
+  --key-toggle-background: hsl(176, 100%, 44%);
+  --key-toggle-shadow: hsl(177, 92%, 70%);
+  --key-button-background: hsl(268, 47%, 21%);
+  --key-button-shadow: hsl(290, 70%, 36%);
+  --text-color: hsl(52, 100%, 62%);
+  --white-color: hsl(0, 0, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Spartan", sans-serif;
+  background: var(--main-background);
+}
+
+.main-container {
+  width: 400px;
+}
+
+/* Theme  */
+.theme-switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-switch-container strong {
+  color: var(--white-color);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.theme-switch-container .toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.theme-switch-container .toggle-container .theme-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--white-color);
+  position: absolute;
+  top: 25px;
+  left: -50px;
+}
+.theme-switch-container .toggle-container .toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.theme-switch-container .toggle-container .toggles::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: var(--toggle-keypad-background);
+  top: 20px;
+  border-radius: 1rem;
+  padding: 0.5rem 0rem;
+  z-index: -1;
+}
+.theme-switch-container .toggle-container .toggles .theme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.2rem;
+}
+.theme-switch-container .toggle-container .toggles .theme label {
+  color: var(--white-color);
+  margin: 0.5rem 0;
+}
+.theme-switch-container .toggle-container .toggles .theme input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Calculator Screen */
+.calc-screen {
+  height: 100px;
+  background: var(--screen-background);
+  display: flex;
+  border-radius: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+
+/* Calculator Buttons */
+.calc-buttons-container {
+  margin: 1rem 0;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  background: var(--toggle-keypad-background);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+.calc-buttons-container button {
+  min-height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  background: var(--key-button-background);
+  border-bottom: 5px solid var(--key-button-shadow);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.calc-buttons-container button:active {
+  transform: translateY(1px);
+}
+.calc-buttons-container .del-btn {
+  text-transform: uppercase;
+  background: var(--key-background);
+  border-bottom: 5px solid var(--key-shadow);
+  color: var(--white-color);
+}
+.calc-buttons-container .reset-btn {
+  grid-column: 1 / span 2;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background: var(--key-background);
+  border-bottom: 5px solid var(--key-shadow);
+}
+.calc-buttons-container .equal-btn {
+  grid-column: 3 / -1;
+  color: var(--white-color);
+  background: var(--key-toggle-background);
+  border-bottom: 5px solid var(--key-toggle-shadow);
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main-container {
+    width: 300px;
+  }
+}

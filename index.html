@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <!-- Calculator Theme Switcher -->
+        <div class="theme-switch-container">
+          <strong class="calc-title">calc</strong>
+          <div class="toggle-container">
+            <span class="theme-title">Theme</span>
+            <div class="toggles">
+              <div class="theme">
+                <label for="theme-1">1</label>
+                <input type="radio" class="theme-1" value="theme-1" />
+              </div>
+              <div class="theme">
+                <label for="theme-2">2</label>
+                <input type="radio" class="theme-2" value="theme-2" />
+              </div>
+              <div class="theme">
+                <label for="theme-3">3</label>
+                <input type="radio" class="theme-3" value="theme-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Calculator Screen Display -->
+        <div class="calc-screen">
+          <h1>0</h1>
+        </div>
+        <!-- Calculator Buttons  -->
+        <div class="calc-buttons-container">
+          <button value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button value="del" class="del-btn">Del</button>
+          <button value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="+" class="operator">+</button>
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button value="-" class="operator">-</button>
+          <button value="." class="decimal">.</button>
+          <button value="0">0</button>
+          <button value="/" class="operator">/</button>
+          <button value="*" class="operator">×</button>
+          <button class="reset-btn">Reset</button>
+          <button value="=" class="equal-btn operator">=</button>
+        </div>
+      </div>
+    </main>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="./js/calc.js"></script>
+  </body>
+</html>
