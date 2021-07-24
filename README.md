@@ -34,18 +34,18 @@ Your users should be able to:
 
 ### Screenshot
 
-## Light Theme
+## Desktop
 
 ![](./screenshot_desktop.png)
 
-## Dark Theme
+## Mobile
 
 ![](./screenshot_mobile.png)
 
 ### Links
 
-- Solution URL: [Calculator Solution](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H/hub/htnl5-css3-flex-grid-sass-javascript-LAgWqOXBF)
-- Live Site URL: [Live Site](https://social-media-dashboard-site.netlify.app/)
+- Solution URL: [Calculator Solution](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29/hub/html-css-flexbox-grid-javascript-y4wnZwc8c)
+- Live Site URL: [Live Site](https://calc-app-site.netlify.app/)
 
 ## My process
 
